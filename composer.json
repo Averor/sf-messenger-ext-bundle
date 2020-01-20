@@ -1,0 +1,37 @@
+{
+  "name": "averor/sf-messenger-ext-bundle",
+  "type": "symfony-bundle",
+  "description": "Symfony Messenger extension",
+  "keywords": ["messenger"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Averor",
+      "email": "averor@averor.dev"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "ramsey/uuid": "^3",
+    "symfony/event-dispatcher-contracts": "^2",
+    "symfony/messenger": "^5"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Averor\\Messenger\\": "src/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "symfony": {
+      "require": "5.*.*"
+    },
+    "branch-alias": {
+      "dev-master": "1.x-dev"
+    }
+  }
+}
