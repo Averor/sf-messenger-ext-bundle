@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Averor\\Messenger\\": "src/"
+      "Averor\\Messenger\\": "./"
     }
   },
   "config": {
