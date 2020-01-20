@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace Averor\Messenger\Logger;
+namespace Averor\Messenger;
 
 use Symfony\Component\Messenger\Envelope;
 
-interface EventLogger
+interface MessageLogger
 {
     public function log(Envelope $envelope): void;
 }

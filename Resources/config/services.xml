@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <defaults public="false" />
+
+        <service id="messenger.middleware.identifiable_message" class="Averor\Messenger\Middleware\IdentifiableMessageMiddleware" />
+        <service id="messenger.middleware.event_causation" class="Averor\Messenger\Middleware\EventCausationMiddleware" />
+        <service id="messenger.middleware.logging" class="Averor\Messenger\Middleware\MessageLoggingMiddleware">
+            <argument type="service" id="Averor\Messenger\MessageLogger" />
+        </service>
+        <service id="messenger.middleware.exception_handling" class="Averor\Messenger\Middleware\ExceptionHandlingMiddleware">
+            <argument type="service" id="Symfony\Contracts\EventDispatcher\EventDispatcherInterface" />
+            <argument type="service" id="Psr\Log\LoggerInterface" />
+        </service>
+        <service id="messenger.middleware.exception_silencing" class="Averor\Messenger\Middleware\ExceptionSilencingMiddleware">
+            <argument type="service" id="Symfony\Contracts\EventDispatcher\EventDispatcherInterface" />
+            <argument type="service" id="Psr\Log\LoggerInterface" />
+        </service>
+
+    </services>
+</container>

@@ -2,8 +2,8 @@
 
 Adds some contracts, stamps and middlewares to the Symfony Messenger component.
 
-##### Logging middleware:
-Separate loggers for commands and events. Bundle provides interface only, logger must be implemented in App
+##### Message Logging Middleware:
+Bundle provides interface only, logger must be implemented in App.
 
 ##### Event Causation Middleware:
 Event (envelope) will receive stamp with command id, that caused that event to happen. 
