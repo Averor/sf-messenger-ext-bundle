@@ -11,7 +11,7 @@ use Symfony\Component\Messenger\Middleware\StackInterface;
 
 class EventCausationMiddleware implements MiddlewareInterface
 {
-    protected string $id;
+    protected ?string $id = null;
 
     public function handle(Envelope $envelope, StackInterface $stack): Envelope
     {
