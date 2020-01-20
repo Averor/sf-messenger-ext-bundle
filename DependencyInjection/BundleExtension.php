@@ -2,20 +2,19 @@
 
 namespace Averor\Messenger\DependencyInjection;
 
-use Symfony\Component\{Config\FileLocator,
-    DependencyInjection\ContainerBuilder,
-    DependencyInjection\Loader\XmlFileLoader,
-    HttpKernel\DependencyInjection\ConfigurableExtension
+use Symfony\Component\Config\FileLocator;
+use Symfony\Component\DependencyInjection\{
+    ContainerBuilder,
+    Extension\Extension,
+    Loader\XmlFileLoader
 };
 
-class BundleExtension extends ConfigurableExtension
+class BundleExtension extends Extension
 {
-    public function getAlias()
-    {
-        return 'averor_messenger';
-    }
-
-    protected function loadInternal(array $mergedConfig, ContainerBuilder $container)
+    /**
+     * @inheritDoc
+     */
+    public function load(array $configs, ContainerBuilder $container)
     {
         $loader = new XmlFileLoader(
             $container,
