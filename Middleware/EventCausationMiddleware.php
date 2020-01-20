@@ -3,11 +3,15 @@
 namespace Averor\Messenger\Middleware;
 
 use Averor\Messenger\Contract\Command;
-use Averor\Messenger\Stamp\CausationStamp;
-use Averor\Messenger\Stamp\IdentifiableMessageStamp;
-use Symfony\Component\Messenger\Envelope;
-use Symfony\Component\Messenger\Middleware\MiddlewareInterface;
-use Symfony\Component\Messenger\Middleware\StackInterface;
+use Averor\Messenger\Stamp\{
+    CausationStamp,
+    IdentifiableMessageStamp
+};
+use Symfony\Component\Messenger\{
+    Envelope,
+    Middleware\MiddlewareInterface,
+    Middleware\StackInterface
+};
 
 class EventCausationMiddleware implements MiddlewareInterface
 {

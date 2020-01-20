@@ -2,19 +2,22 @@
 
 namespace Averor\Messenger\Middleware;
 
-use function get_class;
-
-use Averor\Messenger\Event\MessageFailedEvent;
-use Averor\Messenger\Event\MessageHandlingFailedEvent;
-use Averor\Messenger\Event\MessageValidationFailedEvent;
+use Averor\Messenger\Event\{
+    MessageFailedEvent,
+    MessageHandlingFailedEvent,
+    MessageValidationFailedEvent
+};
 use Psr\Log\LoggerInterface;
-use Symfony\Component\Messenger\Envelope;
-use Symfony\Component\Messenger\Exception\HandlerFailedException;
-use Symfony\Component\Messenger\Exception\ValidationFailedException;
-use Symfony\Component\Messenger\Middleware\MiddlewareInterface;
-use Symfony\Component\Messenger\Middleware\StackInterface;
+use Symfony\Component\Messenger\{
+    Envelope,
+    Exception\HandlerFailedException,
+    Exception\ValidationFailedException,
+    Middleware\MiddlewareInterface,
+    Middleware\StackInterface
+};
 use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 use Throwable;
+use function get_class;
 
 class ExceptionHandlingMiddleware implements MiddlewareInterface
 {

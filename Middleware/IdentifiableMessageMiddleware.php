@@ -3,9 +3,11 @@
 namespace Averor\Messenger\Middleware;
 
 use Averor\Messenger\Stamp\IdentifiableMessageStamp;
-use Symfony\Component\Messenger\Envelope;
-use Symfony\Component\Messenger\Middleware\MiddlewareInterface;
-use Symfony\Component\Messenger\Middleware\StackInterface;
+use Symfony\Component\Messenger\{
+    Envelope,
+    Middleware\MiddlewareInterface,
+    Middleware\StackInterface
+};
 
 class IdentifiableMessageMiddleware implements MiddlewareInterface
 {

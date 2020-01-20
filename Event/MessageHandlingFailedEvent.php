@@ -2,8 +2,10 @@
 
 namespace Averor\Messenger\Event;
 
-use Symfony\Component\Messenger\Envelope;
-use Symfony\Component\Messenger\Exception\HandlerFailedException;
+use Symfony\Component\Messenger\{
+    Envelope,
+    Exception\HandlerFailedException
+};
 use Symfony\Contracts\EventDispatcher\Event;
 
 class MessageHandlingFailedEvent extends Event

@@ -2,8 +2,10 @@
 
 namespace Averor\Messenger\Event;
 
-use Symfony\Component\Messenger\Envelope;
-use Symfony\Component\Messenger\Exception\ValidationFailedException;
+use Symfony\Component\Messenger\{
+    Envelope,
+    Exception\ValidationFailedException
+};
 use Symfony\Contracts\EventDispatcher\Event;
 
 class MessageValidationFailedEvent extends Event

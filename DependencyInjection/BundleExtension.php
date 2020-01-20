@@ -11,9 +11,6 @@ use Symfony\Component\DependencyInjection\{
 
 class BundleExtension extends Extension
 {
-    /**
-     * @inheritDoc
-     */
     public function load(array $configs, ContainerBuilder $container)
     {
         $loader = new XmlFileLoader(

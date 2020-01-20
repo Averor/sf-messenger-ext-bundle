@@ -3,11 +3,13 @@
 namespace Averor\Messenger\Middleware;
 
 use Averor\Messenger\MessageLogger;
-use Symfony\Component\Messenger\Envelope;
-use Symfony\Component\Messenger\Middleware\MiddlewareInterface;
-use Symfony\Component\Messenger\Middleware\StackInterface;
-use Symfony\Component\Messenger\Stamp\ReceivedStamp;
-use Symfony\Component\Messenger\Stamp\RedeliveryStamp;
+use Symfony\Component\Messenger\{
+    Envelope,
+    Middleware\MiddlewareInterface,
+    Middleware\StackInterface,
+    Stamp\ReceivedStamp,
+    Stamp\RedeliveryStamp
+};
 
 class MessageLoggingMiddleware implements MiddlewareInterface
 {
