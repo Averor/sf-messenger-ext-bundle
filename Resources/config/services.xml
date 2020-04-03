@@ -14,11 +14,9 @@
         </service>
         <service id="messenger.middleware.exception_handling" class="Averor\Messenger\Middleware\ExceptionHandlingMiddleware">
             <argument type="service" id="Symfony\Contracts\EventDispatcher\EventDispatcherInterface" />
-            <argument type="service" id="Psr\Log\LoggerInterface" />
         </service>
         <service id="messenger.middleware.exception_silencing" class="Averor\Messenger\Middleware\ExceptionSilencingMiddleware">
             <argument type="service" id="Symfony\Contracts\EventDispatcher\EventDispatcherInterface" />
-            <argument type="service" id="Psr\Log\LoggerInterface" />
         </service>
 
     </services>
